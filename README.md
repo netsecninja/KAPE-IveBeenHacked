@@ -7,6 +7,12 @@ KAPE tagets, modules, and binaries for a quick triage of a system that the user 
 3. Copy the Modules and Targets folders
 4. Paste in the root of your KAPE install folder
 
+# Important note
+Be sure to run one of these first to download the latest mappings for EvtxECmd:
+* kape.exe --msource C: --mdest C:\temp --module !!ToolSync
+* kape.exe --msource C: --mdest C:\temp --module Sync_EvtxECmd
+* modules\bin\evtxecmd.exe --sync
+
 # Binaries
 The binaries in Modules/bin are provided as-is. Here's what to do if you want a newer version
 
