@@ -8,7 +8,7 @@ ExportFormat: json
 Processors:
     -
         Executable: bitsparser.exe
-        CommandLine: -i %sourceDirectory%\Microsoft\Network\Downloader --carveall --carvedb
+        CommandLine: -i %sourceDirectory%\ProgramData\Microsoft\Network\Downloader --carveall --carvedb
         ExportFormat: json
         ExportFile: bitsparser.json
 
