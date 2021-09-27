@@ -1,0 +1,16 @@
+Description: Parses BITS database files to extract job and file information.
+Category: Misc
+Author: Jeremiah Bess
+Version: 1.0
+Id: ba20dda2-c9e7-4f86-b60e-cd1314c92afd
+# BinaryUrl: 
+ExportFormat: json
+Processors:
+    -
+        Executable: bitsparser.exe
+        CommandLine: -i %sourceDirectory%\Microsoft\Network\Downloader --carveall --carvedb
+        ExportFormat: json
+        ExportFile: bitsparser.json
+
+# Documentation
+# https://github.com/fireeye/BitsParser

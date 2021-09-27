@@ -1,0 +1,16 @@
+Description: Parses .job files.
+Category: Misc
+Author: Jeremiah Bess
+Version: 1.0
+Id: 6e217a7f-8e80-401c-a822-d39d4a9df3d8
+# BinaryUrl: 
+ExportFormat: text
+Processors:
+    -
+        Executable: jobparser.exe
+        CommandLine: -d %sourceDirectory%\Windows\Tasks
+        ExportFormat: text
+        ExportFile: jobparser.txt
+
+# Documentation
+# https://github.com/gleeda/misc-scripts/blob/master/misc_python/jobparser.py

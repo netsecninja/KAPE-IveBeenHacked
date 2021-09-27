@@ -1,0 +1,35 @@
+Description: IveBeenHacked analysis module
+Category: Misc
+Author: Jeremiah Bess
+Version: 1.0
+Id: 15d31345-c8a9-4557-b74e-d4f04d2a3a66
+ExportFormat: csv
+Processors:
+    -
+        Executable: InterestingEventIDs.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    -
+        Executable: BrowsingHistoryView.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    -
+        Executable: JobParser.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    -
+        Executable: BitsParser.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    -
+        Executable: PECmd.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    -
+        Executable: PECmd.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    -
+        Executable: RECmd_IveBeenHacked.mkape
+        CommandLine: ""
+        ExportFormat: ""

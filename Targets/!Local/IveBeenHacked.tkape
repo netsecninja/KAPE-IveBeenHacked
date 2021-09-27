@@ -1,0 +1,101 @@
+Description: Broad spectrum triage for when someone says they've been hacked and have little or no details to give you.
+Author: Jeremiah Bess
+Version: 1.0
+Id: 6f09082c-5249-4f7b-9f03-7fe252b4908a
+RecreateDirectories: True
+Targets:
+
+# Event Logs
+    -
+        Name: Windows System logs
+        Category: EventLogs
+        Path: C:\Windows*\system32\winevt\logs\
+        FileMask: 'System.evtx'
+    -
+        Name: Windows Security logs
+        Category: EventLogs
+        Path: C:\Windows*\system32\winevt\logs\
+        FileMask: 'Security.evtx'
+    -
+        Name: Microsoft Office Alerts
+        Category: EventLogs
+        Path: C:\Windows*\system32\winevt\logs\
+        FileMask: 'OAlerts.evtx'
+
+# Web Browser Artifacts        
+    -
+        Name: Chrome History
+        Category: Communications
+        Path: C:\users\%user%\AppData\Local\Google\Chrome\User Data\*\
+        FileMask: History*
+    -
+        Name: Edge folder
+        Category: Communications
+        Path: C:\users\%user%\AppData\Local\Packages\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\
+        Recursive: True
+    -
+        Name: Firefox Places
+        Category: Communications
+        Path: C:\users\%user%\AppData\Roaming\Mozilla\Firefox\Profiles\*\
+        FileMask: places.sqlite*
+    -
+        Name: IE 9/10 History
+        Category: Communications
+        Path: C:\users\%user%\AppData\Local\Microsoft\Windows\History\
+        Recursive: true
+
+# Scheduled Tasks
+    -
+        Name: at .job
+        Category: Persistence
+        Path: C:\Windows\Tasks\
+        FileMask: '*.job'
+    -
+        Name: at SchedLgU.txt
+        Category: Persistence
+        Path: C:\Windows\
+        FileMask: SchedLgU.txt
+    -
+        Name: XML
+        Category: Persistence
+        Path: C:\Windows\System32\Tasks\
+        Recursive: true
+
+# BITS Persistence
+    -
+        Name: BITS files
+        Category: Persistence
+        Path: C:\ProgramData\Microsoft\Network\Downloader\
+        Recursive: true
+
+# Recently Used Files
+    -
+        Name: Prefetch
+        Category: Prefetch
+        Path: C:\Windows*\prefetch\
+        FileMask: '*.pf'
+    -
+        Name: Lnk files from Recent
+        Category: LnkFiles
+        Path: C:\users\%user%\AppData\Roaming\Microsoft\Windows\Recent\
+        Recursive: true
+        Comment: Also includes automatic and custom jumplist directories
+    -
+        Name: Office Recent files
+        Category: LnkFiles
+        Path: C:\Users\%user%\AppData\Roaming\Microsoft\Office\Recent
+        Recursive: true
+    -
+        Name: ntuser.dat registry hive
+        Category: Registry
+        Path: C:\users\%user%\
+        FileMask: ntuser.dat
+    -
+        Name: ntuser.dat registry transaction files
+        Category: Registry
+        Path: C:\users\%user%\
+        FileMask: ntuser.dat.LOG*
+
+# Registry ASEPs
+
+
