@@ -13,4 +13,6 @@ Processors:
         ExportFile: jobparser.txt
 
 # Documentation
-# https://github.com/gleeda/misc-scripts/blob/master/misc_python/jobparser.py
+# 1. Visit https://github.com/gleeda/misc-scripts/blob/master/misc_python/jobparser.py
+# 2. Download the latest version
+# 3. Compile into an exe using pyinstaller, https://www.devdungeon.com/content/pyinstaller-tutorial
