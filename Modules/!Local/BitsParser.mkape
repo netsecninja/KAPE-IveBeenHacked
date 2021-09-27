@@ -13,4 +13,6 @@ Processors:
         ExportFile: bitsparser.json
 
 # Documentation
-# https://github.com/fireeye/BitsParser
+# 1. Visit https://github.com/fireeye/BitsParser
+# 2. Download the latest version
+# 3. Compile into an exe using pyinstaller, https://www.devdungeon.com/content/pyinstaller-tutorial
