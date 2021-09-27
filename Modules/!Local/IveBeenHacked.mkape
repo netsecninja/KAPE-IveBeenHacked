@@ -26,10 +26,6 @@ Processors:
         CommandLine: ""
         ExportFormat: ""
     -
-        Executable: PECmd.mkape
-        CommandLine: ""
-        ExportFormat: ""
-    -
         Executable: RECmd_IveBeenHacked.mkape
         CommandLine: ""
         ExportFormat: ""
